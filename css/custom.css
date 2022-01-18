@@ -6,10 +6,10 @@ body {
     justify-content: center;
     align-items: center;
 }
-.container{
+/* .container{
   max-width: 1000px;
   max-height: 500px;
-}
+} */
 #contenido {
     /* width: 700px; */
     background-color: white;

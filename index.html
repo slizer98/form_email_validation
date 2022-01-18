@@ -10,7 +10,7 @@
   </head>
   <body>
 
-    <div class="container mt-20 bg-white">  
+    <div class="container my-10 bg-white max-w-4xl">  
         <header id="header" class="bg-blue-600 p-3 font-bold">
             Enviar Nuevo Mail
         </header>
@@ -23,11 +23,11 @@
             </div>
             <div class="mb-5">
                 <label for="asunto">Asunto</label>
-                <input class="bg-gray-100 border shadow p-1 w-full "  id="asunto" type="text">
+                <input class="bg-gray-100 border shadow p-1 w-full"  id="asunto" type="text">
             </div>
             <div class="mb-5"> 
                 <label for="mensaje">Mensaje</label>
-                <textarea style="resize: none;" class="bg-gray-100 border shadow p-2 w-full" id="mensaje"></textarea>
+                <textarea class="bg-gray-100 border shadow p-2 w-full" id="mensaje"></textarea>
             </div>
 
             <div  id="spinner">
@@ -43,7 +43,7 @@
             
             <div class="flex justify-between">
                     <button 
-                        id="enviar" class="w-full bg-green-300 px-1 py-3 text-white items-center cursor-not-allowed opacity-50 mr-5 uppercase font-bold items-center flex justify-center" 
+                        id="enviar" class="w-full bg-green-600 px-1 py-3 text-white items-center  opacity-50 mr-5 uppercase font-bold items-center flex justify-center" 
                         type="submit" 
                     >Enviar
                         <i class="material-icons right text-white ml-3">send</i>
@@ -51,7 +51,7 @@
 
                     <button 
                         id="resetBtn" 
-                        class="w-full bg-red-300 px-1 py-3 text-white items-center uppercase font-bold items-center flex justify-center" 
+                        class="w-full bg-red-600 px-1 py-3 text-white items-center uppercase font-bold items-center flex justify-center" 
                         type="submit"
                     >Resetear Form
                             <i class="material-icons right ml-3">delete</i>
