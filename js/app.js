@@ -1,5 +1,6 @@
 // Varibles
 const btnEnviar = document.querySelector('#enviar');
+const btnReset = document.querySelector('#resetBtn');
 const formulario = document.querySelector('#enviar-mail');
 
 // Variables para el formulario
@@ -19,6 +20,9 @@ function eventListeners(){
     email.addEventListener('blur', validarFormulario);
     asunto.addEventListener('blur', validarFormulario);
     mensaje.addEventListener('blur', validarFormulario);
+    
+    // Resetear formulario
+    btnReset.addEventListener('click', resetForm);
     
     // Enviar email
     formulario.addEventListener('submit', enviarEmail);
@@ -82,4 +86,30 @@ function mostrarError(mensaje){
     if(errores.length === 0){
         formulario.insertBefore(mensajeError, document.querySelector('.flex'));
     }
+}
+
+function enviarEmail(e){
+    e.preventDefault();
+    // Mostrar spinner
+    const spinnerGif = document.querySelector('#spinner');
+    spinnerGif.style.display = 'flex';
+    setTimeout(() =>{
+        spinnerGif.style.display = 'none';
+
+        const parrafo = document.createElement('p');
+        parrafo.textContent = 'Email enviado correctamente';
+        parrafo.classList.add('text-center', 'text-white', 'my-2', 'bg-green-500', 'p-2', 'uppercase', 'font-bold');
+
+        formulario.insertBefore(parrafo, spinnerGif);
+
+        setTimeout(() =>{
+            parrafo.remove();
+            resetForm();
+        }, 2000);
+    }, 3000);
+}
+
+function resetForm(){
+    formulario.reset();
+    iniciarApp();
 }
